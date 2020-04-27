@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pong</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      margin-top: 20px;
+      background-color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 95vh;
+    }
+    .canvas-wrapper {
+      background: url('assets/images/court.png');
+      background-repeat: no-repeat;
+    }
+    #canvas {
+      cursor: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="canvas-wrapper">
+    <canvas id="canvas" width="1200" height="900"></canvas>
+  </div>
+
+  <audio id="left-paddle-audio" src="assets/audio/left-paddle.mp3"></audio>
+  <audio id="right-paddle-audio" src="assets/audio/right-paddle.mp3"></audio>
+  <audio id="start-audio" src="assets/audio/start.mp3"></audio>
+  <audio id="end-audio" src="assets/audio/end.mp3"></audio>
+  <audio id="ball-lost-audio" src="assets/audio/ball-lost.mp3"></audio>
+  <audio id="background-audio" src="assets/audio/ping-pong.mp3"></audio>
+
+  <script src="js/ball.js"></script>
+  <script src="js/images.js"></script>
+  <script src="js/paddle.js"></script>
+  <script src="js/paddles.js"></script>
+  <script src="js/graphics-common.js"></script>
+  <script src="js/draw.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="index.js"></script>
+  <script>
+    (() => game.main())()
+  </script>
+</body>
+</html>
